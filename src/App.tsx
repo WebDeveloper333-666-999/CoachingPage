@@ -11,9 +11,12 @@ import Contact from './pages/Contact';
 import Navbar from './container/Navbar';
 import Footer from './container/Footer';
 import BookingModal from './components/BookingModal';
-import Test from './pages/Test';
+
 import { CartModal } from './components/CartModal';
 import YouTube from './pages/YouTube';
+
+import Test from './pages/Test';
+import Test2 from './pages/Test2.jsx';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -36,6 +39,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/test" element={<Test />} />
+            <Route path="/test2" element={<Test2 />} />
           </Routes>
         </div>
 

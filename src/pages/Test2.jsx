@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import BookingModal from '*/components/BookingModal';
-import BookingForm from './components/BookingForm';
-import ScrollToTop from './components/ScrollToTop';
+import BookingModal2 from '../components/BookingModal2.jsx';
+import BookingForm from '../components/BookingForm';
+import ScrollToTop from '../components/ScrollToTop.jsx';
 
-export default function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export default function Test2() {
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   useEffect(() => {
     AOS.init({
@@ -89,7 +89,7 @@ export default function App() {
       </main>
 
       {/* Modal */}
-      <BookingModal
+      <BookingModal2
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />

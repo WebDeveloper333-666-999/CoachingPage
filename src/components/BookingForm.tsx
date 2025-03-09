@@ -2,8 +2,25 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
+interface FormData {
+  name: string;
+  street: string;
+  postalCode: string;
+  mobile: string;
+  email: string;
+  selectedDate: Date;
+  selectedTime: string;
+  courseType: string;
+  message: string;
+  sendCopy: boolean;
+}
+
+const timeSlots = [
+  '09:00', '10:00', '11:00', '14:00', '15:00', '16:00'
+];
+
 export default function BookingForm() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     street: '',
     postalCode: '',
@@ -16,11 +33,7 @@ export default function BookingForm() {
     sendCopy: false
   });
 
-  const timeSlots = [
-    '09:00', '10:00', '11:00', '14:00', '15:00', '16:00'
-  ];
-
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
     console.log(formData);
@@ -87,7 +100,7 @@ export default function BookingForm() {
           </label>
           <DatePicker
             selected={formData.selectedDate}
-            onChange={(date) => setFormData({...formData, selectedDate: date})}
+            onChange={(date: Date) => setFormData({...formData, selectedDate: date})}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
             dateFormat="MMMM d, yyyy"
             minDate={new Date()}

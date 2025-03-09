@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import { format } from 'date-fns';
 import { de } from 'date-fns/locale';
 import { X } from 'lucide-react';
+import BookingForm from './BookingForm';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -63,7 +64,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                   </button>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <BookingForm />
+
+                {/* <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="date" className="block text-sm font-medium text-gray-700">
                       Select Date
@@ -109,7 +112,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                       Confirm Booking
                     </button>
                   </div>
-                </form>
+                </form> */}
               </Dialog.Panel>
             </Transition.Child>
           </div>

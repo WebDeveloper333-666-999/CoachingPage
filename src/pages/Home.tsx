@@ -1,5 +1,9 @@
+import { useEffect } from 'react';
+
 import AudioPlayer from '../components/AudioPlayer';
 import Carousel from '../components/Carousel';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { 
   Globe2, 
   Smartphone, 
@@ -11,13 +15,21 @@ import faqItems from '../constant/faq';
 
 
 function Home() {
+
+  useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, []);
+
   return (
     <div>
       {/* Hero Section with Carousel */}
       <Carousel />
 
       {/* Welcome Section */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-white" data-aos="fade-right">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between lg:space-x-12">
             <div className="lg:w-1/2">
@@ -64,7 +76,7 @@ function Home() {
       </div>
 
       {/* Services Section */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-gray-50" data-aos="fade-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Our Services
@@ -107,7 +119,7 @@ function Home() {
       </div>
 
       {/* About Section */}
-      <div className="py-16 bg-white">
+      <div className="py-16 bg-white" data-aos="fade-right">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between lg:space-x-12">
             <div className="lg:w-1/2">
@@ -140,7 +152,7 @@ function Home() {
       </div>
 
       {/* FAQ Section */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4" data-aos="fade-up">
         <FAQAccordion items={faqItems} />
       </section>
     </div>
