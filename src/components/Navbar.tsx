@@ -8,11 +8,15 @@ import {
 import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
 
+import { useCartStore } from '../store/cartStore';
+
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const toggleCart = useCartStore((state) => state.toggleCart);
+  const { items } = useCartStore();
 
   const navItems = [
     { path: '/', label: 'Startseite' },
@@ -68,10 +72,10 @@ const Navbar: React.FC = () => {
               Register
             </button>
 
-            <div className="relative">
+            <div className="relative" onClick={toggleCart}>
               <ShoppingCart className="h-6 w-6 text-gray-700 hover:text-purple-600 transition duration-200 cursor-pointer" />
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
-                2
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse cursor-pointer">
+                { items.length }
               </span>
             </div>
             <button
@@ -104,14 +108,25 @@ const Navbar: React.FC = () => {
                 {item.label}
               </NavLink>
             ))}
+            
             <button
               onClick={() => {
-                setIsBookingOpen(true);
+                setIsLoginOpen(true);
                 setIsMobileMenuOpen(false);
               }}
               className="w-full bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 mt-4"
             >
-              Termin buchen
+              Login
+            </button>
+
+            <button
+              onClick={() => {
+                setIsRegisterOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
+              className="w-full bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 mt-4"
+            >
+              Register
             </button>
           </div>
         </div>

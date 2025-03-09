@@ -14,6 +14,26 @@ const reviews = [
     content: 'It was a very nice and interesting new experience for me.',
     verified: true,
   },
+
+  {
+    id: 1,
+    name: 'TheFusely',
+    avatar: 'https://via.placeholder.com/50',
+    date: new Date('2023-08-15'),
+    stars: 5,
+    content: 'It was a very nice and interesting new experience for me.',
+    verified: true,
+  },
+
+  {
+    id: 1,
+    name: 'TheFusely',
+    avatar: 'https://via.placeholder.com/50',
+    date: new Date('2023-08-15'),
+    stars: 5,
+    content: 'It was a very nice and interesting new experience for me.',
+    verified: true,
+  },
   // Add more reviews here
 ];
 
@@ -77,3 +97,19 @@ export const ReviewsCarousel: React.FC = () => {
     </div>
   );
 }
+
+
+// import React from 'react';
+
+// function ReviewsCarousel() {
+//   return (
+//     <div className="py-16 px-4 sm:px-6 lg:px-8">
+//       <div className="max-w-7xl mx-auto">
+//         <h1 className="text-4xl font-bold text-center mb-8">Über mich</h1>
+//         {/* Add about page content */}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ReviewsCarousel;

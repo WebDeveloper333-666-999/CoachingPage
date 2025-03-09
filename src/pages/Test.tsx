@@ -21,7 +21,7 @@ function Test() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
+      {/* <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
@@ -47,7 +47,7 @@ function Test() {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Reviews Section */}
       <ReviewsCarousel />

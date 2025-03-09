@@ -12,6 +12,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import Test from './pages/Test';
+import { CartModal } from './components/CartModal';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -41,15 +42,18 @@ function App() {
 
         {/* Booking Modal */}
         <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
-      </div>
 
-      {/* Booking Button */}
-      <button
-        onClick={() => setIsBookingOpen(true)}
-        className="fixed -right-8 top-1/2 rotate-90 hidden md:block bg-purple-600 opacity-50 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-70 hover:opacity-100 transition duration-200 transform hover:scale-105"
-      >
-        Book Now
-      </button>
+        {/* Cart Modal */}
+        <CartModal />
+
+        {/* Booking Button */}
+        <button
+          onClick={() => setIsBookingOpen(true)}
+          className="fixed -right-8 top-1/2 rotate-90 hidden md:block bg-purple-600 opacity-50 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-70 hover:opacity-100 transition duration-200 transform hover:scale-105"
+        >
+          Book Now
+        </button>
+      </div>
     </Router>
   );
 }

@@ -55,15 +55,15 @@ function Footer() {
                 <div>
                 <h3 className="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
                 <div className="mt-4">
-                    <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0">
-                    <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="flex-1 px-4 py-2 rounded-l-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                    <button className="bg-purple-600 text-white px-6 py-2 rounded-r-md hover:bg-purple-700 transition duration-200 transform hover:scale-105">
-                        Subscribe
-                    </button>
+                    <div className="flex flex-col xl:flex-row space-y-2 xl:space-y-0">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="flex-1 px-4 py-2 rounded-l-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-600"
+                        />
+                        <button className="bg-purple-600 text-white px-6 py-2 rounded-r-md hover:bg-purple-700 transition duration-200 transform hover:scale-105">
+                            Subscribe
+                        </button>
                     </div>
                 </div>
                 </div>
