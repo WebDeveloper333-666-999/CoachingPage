@@ -1,16 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 import BookingForm from '../components/BookingForm';
 
 const Prices: React.FC = () => {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">

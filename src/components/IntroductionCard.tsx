@@ -2,6 +2,7 @@ import React from 'react';
 
 interface IntroductionCardProps {
     title: string;
+    subtitle: string;
     description: string;
 }
 

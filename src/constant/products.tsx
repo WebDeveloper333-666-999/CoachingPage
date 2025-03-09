@@ -1,4 +1,5 @@
 interface productsListProps {
+    category: string;
     id?: string;
     src?: string;
     name?: string;

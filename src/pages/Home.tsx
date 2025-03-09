@@ -1,9 +1,5 @@
-import { useEffect } from 'react';
-
 import AudioPlayer from '../components/AudioPlayer';
 import Carousel from '../components/Carousel';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import FAQAccordion from '../components/FAQAccordion';
 import faqItems from '../constant/faq';
 import { NavLink } from 'react-router-dom';
@@ -11,13 +7,6 @@ import ReviewsSection from '../container/ReviewsSection';
 
 
 function Home() {
-
-  useEffect(() => {
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    }, []);
 
   return (
     <div>

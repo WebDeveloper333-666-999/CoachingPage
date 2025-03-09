@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -17,8 +19,17 @@ import YouTube from './pages/YouTube';
 
 import Test from './pages/Test';
 import ScrollToTop from './components/ScrollToTop.js';
+import Prices from './pages/Prices.js';
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
@@ -33,6 +44,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/prices" element={<Prices />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/youtube" element={<YouTube />} />

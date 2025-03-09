@@ -1,7 +1,8 @@
-import React from 'react';
 import { FaQuoteLeft, FaQuoteRight, FaGraduationCap, FaHeart, FaStar, FaBook, FaDog, FaCertificate } from 'react-icons/fa';
+import ImageCard from '../components/ImageCard';
 
 export default function About() {
+
   const education = [
     {
       title: "Mediumship training",
@@ -52,8 +53,16 @@ export default function About() {
           </div>
         </div>
 
+        <div className='grid md:grid-cols-2 gap-12 mb-10' data-aos="fade-left">
+          <ImageCard imageUrl="/src/assets/images/aboutme1.webp" Link='' title="I will send all certificates upon request." description='"A lightbearer is only as good as he/she has gone through the dark hours"
+
+"He who has not experienced his dark side will not recognize his light"' />
+          <ImageCard imageUrl="/src/assets/images/aboutme2.jpg" Link='' title="Sulana has been my faithful companion for 16 years. " description='Paddington accompanies Sulana with special energy from the London School of Mediumship.
+Sulana has taught me a lot.' />
+        </div>
+
         {/* Main Content Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12" data-aos="fade-left">
           {/* Left Column */}
           <div className="space-y-8" data-aos="fade-right">
             <div className="bg-white rounded-xl shadow-lg p-8">
