@@ -13,6 +13,7 @@ import Footer from './container/Footer';
 import BookingModal from './components/BookingModal';
 import Test from './pages/Test';
 import { CartModal } from './components/CartModal';
+import YouTube from './pages/YouTube';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -31,6 +32,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/youtube" element={<YouTube />} />
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/test" element={<Test />} />
