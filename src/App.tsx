@@ -8,8 +8,8 @@ import Courses from './pages/Courses';
 import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './container/Navbar';
+import Footer from './container/Footer';
 import BookingModal from './components/BookingModal';
 import Test from './pages/Test';
 import { CartModal } from './components/CartModal';
@@ -24,7 +24,7 @@ function App() {
         <Navbar />
 
         {/* Main Content */}
-        <div className="pt-16">
+        <div className="pt-16 min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

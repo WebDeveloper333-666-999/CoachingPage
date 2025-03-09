@@ -5,8 +5,8 @@ import {
     Menu, 
     ShoppingCart, 
   } from 'lucide-react';
-import LoginModal from './LoginModal';
-import RegisterModal from './RegisterModal';
+import LoginModal from '../components/LoginModal';
+import RegisterModal from '../components/RegisterModal';
 
 import { useCartStore } from '../store/cartStore';
 
@@ -19,12 +19,12 @@ const Navbar: React.FC = () => {
   const { items } = useCartStore();
 
   const navItems = [
-    { path: '/', label: 'Startseite' },
-    { path: '/about', label: 'Über mich' },
-    { path: '/services', label: 'Dienstleistungen' },
-    { path: '/courses', label: 'Online Kurse' },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About Me' },
+    { path: '/services', label: 'Services' },
+    { path: '/courses', label: 'Online Courses' },
     { path: '/shop', label: 'Online Shop' },
-    { path: '/contact', label: 'Kontakt' }
+    { path: '/contact', label: 'Contact' }
   ];
 
   return (

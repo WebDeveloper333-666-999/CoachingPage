@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReviewsCarousel } from '../components/ReviewsCarousel';
+import { ReviewsCarousel } from '../container/ReviewsCarousel';
 import { ProductCard } from '../components/ProductCard';
 import { CartModal } from '../components/CartModal';
 import { useCartStore } from '../store/cartStore';

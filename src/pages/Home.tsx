@@ -6,6 +6,9 @@ import {
   Palette, 
   BarChart3
 } from 'lucide-react';
+import FAQAccordion from '../components/FAQAccordion';
+import faqItems from '../constant/faq';
+
 
 function Home() {
   return (
@@ -20,7 +23,7 @@ function Home() {
             <div className="lg:w-1/2">
               <div className="relative">
                 <img
-                  src="/src/assets/images/2.jpg"
+                  src="/src/assets/images/1.jpg"
                   alt="Welcome"
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500"
                 />
@@ -29,16 +32,16 @@ function Home() {
             </div>
             <div className="mt-10 lg:mt-0 lg:w-1/2">
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                Herzlich Willkommen liebe Seele
+                Welcome dear soul
               </h2>
 
-              <p className="mt-6 text-lg text-gray-500 leading-relaxed">
-                Hier beginnt unsere Reise.<br />
-                Deine Seele hat dich hierher geführt. Schön, dass du da bist und dass es dich gibt.
+              <p className="mt-6 text-xl text-gray-500 leading-relaxed">
+                This is where our journey begins.<br />
+                Your soul has led you here. It's great that you are here and that you exist. 
               </p>
 
-              <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-                Gleich als erstes möchte ich dich mit dieser kleiner Meditation beschenken. Geniesse es!
+              <p className="mt-4 text-xl text-gray-500 leading-relaxed">
+                First of all, I would like to give you this little meditation. Enjoy it!
               </p>
 
               <AudioPlayer src={""} className="bg-gray-50 mt-5" />
@@ -48,7 +51,7 @@ function Home() {
                   Audio abspielen
                 </button>
                 <button className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-xl text-sm font-medium hover:bg-purple-50 transform hover:scale-105 transition duration-200">
-                  Dienstleistungen
+                  Services
                 </button> */}
   
                 <button className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
@@ -108,24 +111,24 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between lg:space-x-12">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Über mich</h2>
+              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">About Me</h2>
               <p className="mt-6 text-xl text-gray-500 italic">
-                "Wer seine Schattenseiten nicht erfahren hat, wird sein Licht nicht erkennen." Seelenflüsterin Sarah
+                "He who has not experienced his dark side will not recognize his light." Soul whisperer Sarah
               </p>
               <p className="mt-6 text-lg text-gray-500 leading-relaxed">
-                Ich habe eine Fähigkeit, die ich neu entdecken durfte nämlich meine Medialität.
+               I have a skill that I have rediscovered, namely my mediumship.
               </p>
               <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-                Dazu kommen viele Tools aus der Persönlichkeitsentwicklung und der Psychologie.
+               There are also many tools from personality development and psychology.
               </p>
               <button className="mt-8 bg-purple-600 text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
-                Über mich
+                About Me
               </button>
             </div>
             <div className="mt-10 lg:mt-0 lg:w-1/2">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  src="/src/assets/images/2.jpg"
                   alt="About"
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500"
                 />
@@ -135,6 +138,11 @@ function Home() {
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="py-12 px-4">
+        <FAQAccordion items={faqItems} />
+      </section>
     </div>
   );
 }
