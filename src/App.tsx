@@ -17,6 +17,7 @@ import YouTube from './pages/YouTube';
 
 import Test from './pages/Test';
 import Test2 from './pages/Test2.jsx';
+import ScrollToTop from './components/ScrollToTop.js';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -59,6 +60,9 @@ function App() {
         >
           Book Now
         </button>
+
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
       </div>
     </Router>
   );

@@ -8,7 +8,7 @@ const reviews = [
   {
     id: 1,
     name: 'TheFusely',
-    avatar: 'https://via.placeholder.com/50',
+    avatar: '/src/assets/images/test-avatar.jpg',
     date: new Date('2023-08-15'),
     stars: 5,
     content: 'It was a very nice and interesting new experience for me.',
@@ -18,7 +18,7 @@ const reviews = [
   {
     id: 1,
     name: 'TheFusely',
-    avatar: 'https://via.placeholder.com/50',
+    avatar: '/src/assets/images/test-avatar2.jpg',
     date: new Date('2023-08-15'),
     stars: 5,
     content: 'It was a very nice and interesting new experience for me.',
@@ -28,7 +28,17 @@ const reviews = [
   {
     id: 1,
     name: 'TheFusely',
-    avatar: 'https://via.placeholder.com/50',
+    avatar: '/src/assets/images/test-avatar2.jpg',
+    date: new Date('2023-08-15'),
+    stars: 5,
+    content: 'It was a very nice and interesting new experience for me.',
+    verified: true,
+  },
+
+  {
+    id: 1,
+    name: 'TheFusely',
+    avatar: '/src/assets/images/test-avatar.jpg',
     date: new Date('2023-08-15'),
     stars: 5,
     content: 'It was a very nice and interesting new experience for me.',

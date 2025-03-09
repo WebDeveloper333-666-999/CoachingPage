@@ -3,6 +3,7 @@ import { ReviewsCarousel } from '../container/ReviewsCarousel';
 import { ProductCard } from '../components/ProductCard';
 import { CartModal } from '../components/CartModal';
 import { useCartStore } from '../store/cartStore';
+import { BarChart3, Globe2, Palette, Smartphone } from 'lucide-react';
 
 const products = [
   {
@@ -63,6 +64,49 @@ function Test() {
           </div>
         </div>
       </section>
+
+      {/* Services Section */}
+      <div className="py-16 bg-white-50" data-aos="fade-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+            {[
+              {
+                icon: <Globe2 className="h-12 w-12 text-purple-600" />,
+                title: "Web Development",
+                description: "We build responsive and user-friendly websites tailored to your business needs."
+              },
+              {
+                icon: <Smartphone className="h-12 w-12 text-purple-600" />,
+                title: "Mobile App Development",
+                description: "We create cross-platform mobile applications for iOS and Android."
+              },
+              {
+                icon: <Palette className="h-12 w-12 text-purple-600" />,
+                title: "UI/UX Design",
+                description: "We design intuitive and visually appealing interfaces for your digital products."
+              },
+              {
+                icon: <BarChart3 className="h-12 w-12 text-purple-600" />,
+                title: "Digital Marketing",
+                description: "We help you grow your business with effective digital marketing strategies."
+              }
+            ].map((service, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <div className="bg-purple-50 rounded-xl p-4 inline-block mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-500 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Cart Modal */}
       <CartModal />

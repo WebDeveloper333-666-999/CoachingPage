@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <NavLink
                 key={item.path}
-                to={item.path}
+              to={item.path}
                 className={({ isActive }) =>
                   `transition-all duration-200 ${
                     isActive
