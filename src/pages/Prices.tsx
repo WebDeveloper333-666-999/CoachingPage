@@ -1,5 +1,6 @@
 import React from 'react';
 import BookingForm from '../components/BookingForm';
+import ReviewsSection from '../container/ReviewsSection';
 
 const Prices: React.FC = () => {
 
@@ -100,7 +101,7 @@ const Prices: React.FC = () => {
           <div className="py-16" data-aos="fade-right">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="lg:flex lg:items-center lg:justify-between lg:space-x-12">
-                <div className="lg:w-1/2 md:order-2">
+                <div className="lg:w-1/2 md:order-1">
                   <div className="relative">
                     <img
                       src="/src/assets/images/prices3.webp"
@@ -110,7 +111,7 @@ const Prices: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mt-10 lg:mt-0 lg:w-1/2 md:order-1">
+                <div className="mt-10 lg:mt-0 lg:w-1/2 md:order-2">
                   <h2 className="text-3xl font-bold text-purple-600 mb-4">Prices - Animal Communication</h2>
                   
                   <div className='mb-4'>
@@ -127,14 +128,14 @@ const Prices: React.FC = () => {
 
           {/* Become a Seelenfluesterin member and receive more tips, tricks and discounts */}
           <div className="grid md:grid-cols-2 gap-8 items-center" data-aos="fade-left">
-            <div className="md:order-1">
+            <div className="md:order-2">
               <img
                 src="/src/assets/images/prices4.webp"
                 alt="Energetic Healing"
                 className="rounded-lg shadow-lg"
               />
             </div>
-            <div className="md:order-2">
+            <div className="md:order-1">
               <h2 className="text-3xl font-bold text-purple-600 mb-4">Become a Seelenfluesterin member and receive more tips, tricks and discounts</h2>
 
               <a href='https://ko-fi.com/seelenfluesterin7777' className='text-purple-600'>https://ko-fi.com/seelenfluesterin7777</a>
@@ -146,19 +147,11 @@ const Prices: React.FC = () => {
                       <li>Bronze, silver and gold have advantages. As a gold member, you benefit from <b>daily blogs at 9 p.m.</b> on a topic related to personal development or magic, which will give you expanded knowledge and tips.</li>
                     </ul>
               </div>
-
-              <div className='mb-4'>
-                <h3 className="text-2xl font-bold text-gray-600 ">How does it work:</h3>
-
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Book the course using the form below</li>
-                  <li>• Pay the course in advance via Twint</li>
-                  <li>• After payment you will receive a link and a password and off you go</li>
-                </ul>
-              </div>
             </div>
           </div>
         </section>
+
+        <ReviewsSection />
 
         {/* Booking Form Section */}
         <section className="mt-16 bg-white rounded-lg shadow-lg p-8" data-aos="fade-up">
