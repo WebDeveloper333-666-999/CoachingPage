@@ -4,15 +4,15 @@ import { NavLink } from 'react-router-dom';
 import { 
     Menu, 
     ShoppingCart, 
-    Globe2, 
   } from 'lucide-react';
+import LoginModal from './LoginModal';
+import RegisterModal from './RegisterModal';
 
-import BookingModal from './BookingModal';
-  
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
   const navItems = [
     { path: '/', label: 'Startseite' },
@@ -29,7 +29,8 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <NavLink to="/" className="flex-shrink-0">
-              <Globe2 className="h-8 w-8 text-purple-600" />
+              {/* <Globe2 className="h-8 w-8 text-purple-600" /> */}
+              <img src="src/assets/images/logo3.png" alt="Logo" className="h-16 w-16 p-1" />
             </NavLink>
           </div>
           
@@ -54,11 +55,19 @@ const Navbar: React.FC = () => {
 
           <div className="flex items-center space-x-4">
             <button
-              onClick={() => setIsBookingOpen(true)}
+              onClick={() => setIsLoginOpen(true)}
               className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-200 transform hover:scale-105"
             >
-              Termin buchen
+              Login
             </button>
+
+            <button
+              onClick={() => setIsRegisterOpen(true)}
+              className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-200 transform hover:scale-105"
+            >
+              Register
+            </button>
+
             <div className="relative">
               <ShoppingCart className="h-6 w-6 text-gray-700 hover:text-purple-600 transition duration-200 cursor-pointer" />
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
@@ -108,8 +117,11 @@ const Navbar: React.FC = () => {
         </div>
       )}
 
-      {/* Booking Modal */}
-      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
+      {/* Login Modal */}
+      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+
+      {/* Register Modal */}
+      <RegisterModal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)} />
     </nav>
   );
 };

@@ -1,8 +1,15 @@
 import React from 'react';
 
+import { 
+    Facebook,
+    Twitter,
+    Instagram,
+    Linkedin,
+  } from 'lucide-react';
+
 function Footer() {
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
         {/* Footer */}
         <footer className="bg-gray-900 text-white">

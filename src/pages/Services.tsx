@@ -1,4 +1,5 @@
-import { Heart, Brain, MessageCircle, Sparkles } from 'lucide-react';
+import { Heart, Brain, MessageCircle, Sparkles, Play } from 'lucide-react';
+import ServiceCard from '../components/ServiceCard';
 
 const services = [
   {
@@ -6,28 +7,32 @@ const services = [
     title: "Spirituelles Coaching",
     description: "Entdecken Sie Ihre innere Kraft und spirituelle Führung durch personalisiertes Coaching.",
     price: "120€",
-    duration: "60 min"
+    duration: "60 min",
+    audioUrl: "https://example.com/meditation1.mp3" // Replace with actual audio URL
   },
   {
     icon: <Heart className="h-12 w-12 text-purple-600" />,
     title: "Energetic Healing",
     description: "Harmonisierung Ihrer Energiezentren und Auflösung von Blockaden.",
     price: "150€",
-    duration: "90 min"
+    duration: "90 min",
+    audioUrl: "https://example.com/meditation2.mp3" // Replace with actual audio URL
   },
   {
     icon: <MessageCircle className="h-12 w-12 text-purple-600" />,
     title: "Seelen Kommunikation",
     description: "Tiefgehende Gespräche zur Verbindung mit Ihrer inneren Weisheit.",
     price: "100€",
-    duration: "45 min"
+    duration: "45 min",
+    audioUrl: "https://example.com/meditation3.mp3" // Replace with actual audio URL
   },
   {
     icon: <Sparkles className="h-12 w-12 text-purple-600" />,
     title: "Aura Clearing",
     description: "Reinigung und Stärkung Ihrer energetischen Felder.",
     price: "130€",
-    duration: "75 min"
+    duration: "75 min",
+    audioUrl: "https://example.com/meditation4.mp3" // Replace with actual audio URL
   }
 ];
 
@@ -35,17 +40,20 @@ const testimonials = [
   {
     name: "Sarah M.",
     text: "Eine wundervolle Erfahrung! Die Sitzung hat mir geholfen, Klarheit zu finden.",
-    rating: 5
+    rating: 5,
+    audioUrl: "https://example.com/testimonial1.mp3" // Replace with actual audio URL
   },
   {
     name: "Michael K.",
     text: "Sehr professionell und einfühlsam. Ich fühle mich wie neugeboren.",
-    rating: 5
+    rating: 5,
+    audioUrl: "https://example.com/testimonial2.mp3" // Replace with actual audio URL
   },
   {
     name: "Lisa B.",
     text: "Die beste Entscheidung, die ich treffen konnte. Danke für die Unterstützung!",
-    rating: 5
+    rating: 5,
+    audioUrl: "https://example.com/testimonial3.mp3" // Replace with actual audio URL
   }
 ];
 
@@ -61,25 +69,7 @@ function Services() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
-            >
-              <div className="bg-purple-50 rounded-xl p-4 inline-block mb-4">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <div className="flex justify-between items-center">
-                <div>
-                  <span className="text-purple-600 font-semibold text-lg">{service.price}</span>
-                  <span className="text-gray-500 ml-2">/ {service.duration}</span>
-                </div>
-                <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-200">
-                  Buchen
-                </button>
-              </div>
-            </div>
+            <ServiceCard key={index} {...service} />
           ))}
         </div>
 
@@ -102,7 +92,14 @@ function Services() {
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4">{testimonial.text}</p>
-                <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                <div className="flex justify-between items-center">
+                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                  {testimonial.audioUrl && (
+                    <button className="text-purple-600 hover:text-purple-700">
+                      <Play className="h-5 w-5" />
+                    </button>
+                  )}
+                </div>
               </div>
             ))}
           </div>

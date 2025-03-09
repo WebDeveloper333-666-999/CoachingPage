@@ -9,8 +9,12 @@ import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import BookingModal from './components/BookingModal';
+import Test from './pages/Test';
 
 function App() {
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
     <Router>
@@ -27,9 +31,25 @@ function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
+
+            <Route path="/test" element={<Test />} />
           </Routes>
         </div>
+
+        {/* Footer */}
+        <Footer />
+
+        {/* Booking Modal */}
+        <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
       </div>
+
+      {/* Booking Button */}
+      <button
+        onClick={() => setIsBookingOpen(true)}
+        className="fixed -right-8 top-1/2 rotate-90 hidden md:block bg-purple-600 opacity-50 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-70 hover:opacity-100 transition duration-200 transform hover:scale-105"
+      >
+        Book Now
+      </button>
     </Router>
   );
 }

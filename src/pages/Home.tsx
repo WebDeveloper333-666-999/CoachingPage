@@ -1,13 +1,10 @@
+import AudioPlayer from '../components/AudioPlayer';
 import Carousel from '../components/Carousel';
 import { 
   Globe2, 
   Smartphone, 
   Palette, 
-  BarChart3,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
+  BarChart3
 } from 'lucide-react';
 
 function Home() {
@@ -23,7 +20,7 @@ function Home() {
             <div className="lg:w-1/2">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  src="/src/assets/images/2.jpg"
                   alt="Welcome"
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500"
                 />
@@ -34,19 +31,28 @@ function Home() {
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
                 Herzlich Willkommen liebe Seele
               </h2>
+
               <p className="mt-6 text-lg text-gray-500 leading-relaxed">
                 Hier beginnt unsere Reise.<br />
                 Deine Seele hat dich hierher geführt. Schön, dass du da bist und dass es dich gibt.
               </p>
+
               <p className="mt-4 text-lg text-gray-500 leading-relaxed">
                 Gleich als erstes möchte ich dich mit dieser kleiner Meditation beschenken. Geniesse es!
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button className="bg-purple-600 text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
+
+              <AudioPlayer src={""} className="bg-gray-50 mt-5" />
+
+              <div className="mt-8 flex flex-col justify-center sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                {/* <button className="bg-purple-600 text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
                   Audio abspielen
                 </button>
                 <button className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-xl text-sm font-medium hover:bg-purple-50 transform hover:scale-105 transition duration-200">
                   Dienstleistungen
+                </button> */}
+  
+                <button className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
+                  Services
                 </button>
               </div>
             </div>
