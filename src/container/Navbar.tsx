@@ -9,12 +9,14 @@ import LoginModal from '../components/LoginModal';
 import RegisterModal from '../components/RegisterModal';
 
 import { useCartStore } from '../store/cartStore';
+import AuthModal from '../components/AuthModal';
 
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const toggleCart = useCartStore((state) => state.toggleCart);
   const { items } = useCartStore();
 
@@ -60,17 +62,13 @@ const Navbar: React.FC = () => {
 
           <div className="flex items-center space-x-4">
             <button
-              onClick={() => setIsLoginOpen(true)}
+              onClick={() => {
+                setIsAuthModalOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
               className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-200 transform hover:scale-105"
             >
-              Login
-            </button>
-
-            <button
-              onClick={() => setIsRegisterOpen(true)}
-              className="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition duration-200 transform hover:scale-105"
-            >
-              Register
+              Sign In
             </button>
 
             <div className="relative" onClick={toggleCart}>
@@ -138,6 +136,12 @@ const Navbar: React.FC = () => {
 
       {/* Register Modal */}
       <RegisterModal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)} />
+
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+      />
     </nav>
   );
 };
