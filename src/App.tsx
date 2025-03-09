@@ -16,7 +16,6 @@ import { CartModal } from './components/CartModal';
 import YouTube from './pages/YouTube';
 
 import Test from './pages/Test';
-import Test2 from './pages/Test2.jsx';
 import ScrollToTop from './components/ScrollToTop.js';
 
 function App() {
@@ -40,7 +39,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/test" element={<Test />} />
-            <Route path="/test2" element={<Test2 />} />
           </Routes>
         </div>
 

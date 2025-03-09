@@ -92,7 +92,12 @@ const Carousel: React.FC = () => {
                 <p className="text-xl sm:text-2xl text-white/90 mb-8 transform transition-all duration-700 translate-y-0 opacity-100">
                   {slide.description}
                 </p>
-                <button className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
+                <button
+                  onClick={() => {
+                    setIsAuthModalOpen(true);
+                  }}
+
+                  className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                 </button>
               </div>

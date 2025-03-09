@@ -5,8 +5,7 @@ import {
     Menu, 
     ShoppingCart, 
   } from 'lucide-react';
-import LoginModal from '../components/LoginModal';
-import RegisterModal from '../components/RegisterModal';
+import LoginModal from '../components/ModalSample';
 
 import { useCartStore } from '../store/cartStore';
 import AuthModal from '../components/AuthModal';
@@ -15,7 +14,6 @@ import AuthModal from '../components/AuthModal';
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const toggleCart = useCartStore((state) => state.toggleCart);
   const { items } = useCartStore();
@@ -110,22 +108,12 @@ const Navbar: React.FC = () => {
             
             <button
               onClick={() => {
-                setIsLoginOpen(true);
+                setIsAuthModalOpen(true);
                 setIsMobileMenuOpen(false);
               }}
               className="w-full bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 mt-4"
             >
-              Login
-            </button>
-
-            <button
-              onClick={() => {
-                setIsRegisterOpen(true);
-                setIsMobileMenuOpen(false);
-              }}
-              className="w-full bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 mt-4"
-            >
-              Register
+              Sing In
             </button>
           </div>
         </div>
@@ -133,9 +121,6 @@ const Navbar: React.FC = () => {
 
       {/* Login Modal */}
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
-
-      {/* Register Modal */}
-      <RegisterModal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)} />
 
       {/* Auth Modal */}
       <AuthModal

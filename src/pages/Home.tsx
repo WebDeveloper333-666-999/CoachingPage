@@ -62,7 +62,7 @@ function Home() {
                   Services
                 </button> */}
   
-                <NavLink to="/services" className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">Services</NavLink>
+                <NavLink to="/services" className="mt-2 bg-purple-600 text-white px-8 py-4 rounded-xl text-md font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">Services</NavLink>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ function Home() {
               <p className="mt-4 text-lg text-gray-500 leading-relaxed">
                There are also many tools from personality development and psychology.
               </p>
-              <button className="mt-8 bg-purple-600 text-white px-8 py-4 rounded-xl text-sm font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
+              <button className="mt-8 bg-purple-600 text-white px-8 py-4 rounded-xl text-md font-medium hover:bg-purple-700 transform hover:scale-105 transition duration-200 shadow-lg hover:shadow-xl">
                 About Me
               </button>
             </div>
