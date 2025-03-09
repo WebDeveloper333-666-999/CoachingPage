@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import AuthModal from './AuthModal';
 
 interface Slide {
   image: string;
@@ -38,7 +39,8 @@ const slides: Slide[] = [
 const Carousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isAutoPlaying) {
@@ -89,9 +91,11 @@ const Carousel: React.FC = () => {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 transform transition-all duration-700 translate-y-0 opacity-100">
                   {slide.title}
                 </h1>
+                
                 <p className="text-xl sm:text-2xl text-white/90 mb-8 transform transition-all duration-700 translate-y-0 opacity-100">
                   {slide.description}
                 </p>
+
                 <button
                   onClick={() => {
                     setIsAuthModalOpen(true);
@@ -113,6 +117,7 @@ const Carousel: React.FC = () => {
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
+
       <button
         onClick={goToNextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-200 hover:scale-110"
@@ -140,6 +145,12 @@ const Carousel: React.FC = () => {
 
       {/* Gradient Overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={() => setIsAuthModalOpen(false)}
+      />
     </div>
   );
 };
