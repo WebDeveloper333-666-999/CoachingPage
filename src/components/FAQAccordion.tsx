@@ -20,7 +20,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       <h2 className="text-4xl font-light text-purple-500 mb-8">
         Frequently Asked Questions
       </h2>

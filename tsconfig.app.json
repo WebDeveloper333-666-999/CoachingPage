@@ -19,14 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    
-    // Base Url by "./src"
-    "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "*": ["*"]
-    }
-  }
   },
   "include": ["src"]
 }

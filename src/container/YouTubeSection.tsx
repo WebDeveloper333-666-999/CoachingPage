@@ -19,7 +19,7 @@ const videos: Video[] = [
     description: 'Are you highly sensitive? Do you feel things more intensely? Are scents, tastes and moods more intense for you? Do you sometimes feel like you don\'t quite fit in with this society?',
     category: 'podcast',
     thumbnailUrl: '/video-thumbnail-1.jpg',
-    embedUrl: 'https://www.youtube.com/embed/VIDEO_ID_1',
+    embedUrl: 'https://youtu.be/2C9i672OC4U',
     date: '2023-08-01'
   },
   {
@@ -28,7 +28,7 @@ const videos: Video[] = [
     description: 'Hello dear soul, If you sometimes have a lot of worries at once because life sees a bit of potential in you :), then maybe you just need something or someone to take your worries away.',
     category: 'meditation',
     thumbnailUrl: '/video-thumbnail-2.jpg',
-    embedUrl: 'https://www.youtube.com/embed/VIDEO_ID_2',
+    embedUrl: 'https://youtu.be/SzDMB-zY9ds',
     date: '2023-07-15'
   },
   // Add more videos here
