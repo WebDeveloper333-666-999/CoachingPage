@@ -75,7 +75,7 @@ const Courses: React.FC = () => {
               <img
                 src="/src/assets/images/course22.webp"
                 alt="Energetic Healing"
-                className="rounded-lg shadow-lg"
+                className="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500"
               />
             </div>
             <div className="md:order-2">
@@ -149,7 +149,7 @@ const Courses: React.FC = () => {
               <img
                 src="/src/assets/images/course24.webp"
                 alt="Energetic Healing"
-                className="rounded-lg shadow-lg"
+                className="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500"
               />
             </div>
             <div className="md:order-2">

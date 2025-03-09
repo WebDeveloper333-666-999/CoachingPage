@@ -41,6 +41,7 @@ function Shop() {
     <div className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-purple-600 text-center mb-8">Online Shop</h1>
+        <h2 className="text-2xl font-bold text-purple-600 text-center mb-8">Seelenfluesterin donates 10% of all webshop revenue to various animal shelters</h2>
 
         {/* Filter, Sort, and Search Controls */}
         <div className="flex justify-between items-center mb-8">

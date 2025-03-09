@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaBook, FaHandHoldingHeart, FaDog, FaMagic } from 'react-icons/fa';
+import ReviewsSection from '../container/ReviewsSection';
+import { NavLink } from 'react-router-dom';
 
 interface Service {
   icon: React.ElementType;
@@ -65,13 +67,15 @@ export default function Services() {
                 {service.description}
               </p>
               <div className="text-center">
-                <button className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300">
+                <NavLink to="/prices" className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300">
                   {service.price}
-                </button>
+                </NavLink>
               </div>
             </div>
           ))}
         </div>
+
+        <ReviewsSection />
       </div>
     </div>
   );
