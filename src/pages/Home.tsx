@@ -4,6 +4,7 @@ import FAQAccordion from '../components/FAQAccordion';
 import faqItems from '../constant/faq';
 import { NavLink } from 'react-router-dom';
 import ReviewsSection from '../container/ReviewsSection';
+import BookingForm from '../components/BookingForm';
 
 
 function Home() {

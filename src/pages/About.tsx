@@ -54,7 +54,7 @@ export default function About() {
         </div>
 
         <div className='grid md:grid-cols-2 gap-12 mb-10' data-aos="fade-left">
-          <ImageCard imageUrl="/src/assets/images/aboutme1.webp" Link='' title="I will send all certificates upon request." description='"A lightbearer is only as good as he/she has gone through the dark hours"
+          <ImageCard imageUrl="/src/assets/images/2.jpg" Link='' title="I will send all certificates upon request." description='"A lightbearer is only as good as he/she has gone through the dark hours"
 
 "He who has not experienced his dark side will not recognize his light"' />
           <ImageCard imageUrl="/src/assets/images/aboutme2.jpg" Link='' title="Sulana has been my faithful companion for 16 years. " description='Paddington accompanies Sulana with special energy from the London School of Mediumship.
